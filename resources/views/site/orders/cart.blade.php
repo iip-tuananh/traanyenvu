@@ -422,7 +422,7 @@
                                             <div class="summary-total">
                                                 <div class="content-items">
                                                     <div class="item-content-left">Tổng tiền</div>
-                                                    <div class="item-content-right"><span class="total-price"><% total | number%>₫</span></div>
+                                                    <div class="item-content-right"><span class="total-price" ng-cloak><% total | number%>₫</span></div>
                                                 </div>
                                             </div>
                                             <div class="summary-action">
