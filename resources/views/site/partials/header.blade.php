@@ -254,19 +254,19 @@
                             <ul id="nav" class="nav">
 
 
-                                <li class="nav-item active">
+                                <li class="nav-item {{ request()->routeIs('front.home-page') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('front.home-page') }}" title="Trang chủ">Trang
                                         chủ</a>
                                 </li>
 
 
-                                <li class="nav-item ">
+                                <li class="nav-item {{ request()->routeIs('front.abouts') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('front.abouts') }}" title="Giới thiệu">Giới
                                         thiệu</a>
                                 </li>
 
 
-                                <li class="nav-item has-childs " data-section="header_nav">
+                                <li class="nav-item has-childs {{ request()->routeIs('front.getProductList*') ? 'active' : '' }}" data-section="header_nav">
                                     <a href="{{ route('front.getProductList') }}" class="nav-link" title="Sản phẩm">Sản
                                         phẩm
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -293,12 +293,12 @@
                                 </li>
 
 
-                                <li class="nav-item ">
+                                <li class="nav-item {{ request()->routeIs('front.blogs') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('front.blogs') }}" title="Tin tức">Tin tức</a>
                                 </li>
 
 
-                                <li class="nav-item ">
+                                <li class="nav-item {{ request()->routeIs('front.contact') ? 'active' : '' }}">
                                     <a class="nav-link" href="{{ route('front.contact') }}" title="Liên hệ">Liên hệ</a>
                                 </li>
 
