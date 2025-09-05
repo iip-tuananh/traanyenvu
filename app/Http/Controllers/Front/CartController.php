@@ -85,8 +85,8 @@ class CartController extends Controller
 
         $cartList->remove($request->product_id);
 
-        return \Response::json(['success' => true, 'items' => \Cart::getContent(), 'total' => \Cart::getTotal(),
-            'count' => \Cart::getContent()->sum('quantity')]);
+        return \Response::json(['success' => true, 'items' => $cartList->getContent(), 'total' => $cartList->getTotal(),
+            'count' => $cartList->getContent()->sum('quantity')]);
     }
 
     // trang thanh toán
