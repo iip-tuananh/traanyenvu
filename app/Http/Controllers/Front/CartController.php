@@ -59,8 +59,8 @@ class CartController extends Controller
             ]
         ]);
 
-        return \Response::json(['success' => true, 'items' => \Cart::getContent(), 'total' => \Cart::getTotal(),
-            'count' => \Cart::getContent()->sum('quantity')]);
+        return \Response::json(['success' => true, 'items' => $cartList->getContent(), 'total' => $cartList->getTotal(),
+            'count' => $cartList->getContent()->sum('quantity')]);
     }
 
     public function updateItem(Request $request)
